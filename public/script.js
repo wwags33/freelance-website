@@ -78,7 +78,8 @@ function headerInit() {
 window.addEventListener("load", headerInit);
 
 /**
- * TBD
+ * Select divs in the make-box component.
+ * Update their face in a loop.
  */
 function heroInit() {
   const SWITCHER_DELAY = 2000;
@@ -124,16 +125,9 @@ function heroInit() {
 }
 window.addEventListener("load", heroInit);
 
-// function smoothScrollInit() {
-//   document.querySelectorAll('a[href*="#"]:not([href="#"]):not([href="#0"])').forEach((localLink) =>{
-//     localLink.onclick = function(event) {
-
-//     };
-//   });
-
-// }
-// window.addEventListener("load", smoothScrollInit);
-
+/**
+ * jQuery to implement smooth scroll from https://css-tricks.com/snippets/jquery/smooth-scrolling/
+ */
 $(function() {
   // Select all links with hashes
   $('a[href*="#"]')

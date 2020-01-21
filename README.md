@@ -6,4 +6,4 @@ Open folder in container in vscode. If the dependencies become outdated, rebuild
 
 Run `./build-css.sh` to build css.
 
-Run `serve public/` to serve.
+Run `serve -n public/` to serve.

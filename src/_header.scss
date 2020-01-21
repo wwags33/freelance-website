@@ -58,6 +58,11 @@
   text-decoration: none;
 }
 
+.nav-bar__brand:hover {
+  @extend %full-shadow;
+  @extend %shadow-transition;
+}
+
 .nav-bar__logoImg {
   width: 2rem;
   margin-right: 0.5rem;
