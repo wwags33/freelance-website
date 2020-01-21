@@ -1,0 +1,154 @@
+@import "globals";
+
+/* Page */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: $body-min-width;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+*:focus {
+  border: 0;
+  outline: 0;
+  @extend %full-shadow;
+}
+
+*::-moz-focus-inner {
+  border: 0;
+}
+
+@import "header";
+
+/* Main */
+
+.content-section {
+  position: relative; // To layer over particles-bg.
+  @extend %container;
+  min-height: 100vh;
+  padding: 2.5rem 0.5rem 0 0.5rem;
+
+  &:last-child {
+    min-height: 95vh;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero__intro {
+  font-size: 1.5rem;
+}
+
+.make-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.make-box__opening-text {
+  margin-right: 0.6rem;
+}
+
+.make-box__switcher-link {
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.make-box__switcher {
+  position: relative;
+  width: 14.5rem;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+
+  perspective: 600px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.make-box__switch-item {
+  border: 2px solid black;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s linear;
+  transform-origin: center center -3.6rem;
+}
+
+.make-box__switch-item_accent {
+  background-color: black;
+  color: white;
+}
+
+.make-box__switch-item[data-face="front"] {
+  transition: none;
+}
+
+.make-box__switch-item[data-face="front-top"] {
+  transform: rotateX(-315deg);
+}
+
+.make-box__switch-item[data-face="top"] {
+  transform: rotateX(-270deg);
+}
+
+.make-box__switch-item[data-face="back-top"] {
+  transform: rotateX(-225deg);
+}
+
+.make-box__switch-item[data-face="back"] {
+  transform: rotateX(-180deg);
+}
+
+.make-box__switch-item[data-face="back-bottom"] {
+  transform: rotateX(-135deg);
+}
+
+.make-box__switch-item[data-face="bottom"] {
+  transform: rotateX(-90deg);
+}
+
+.make-box__switch-item[data-face="front-bottom"] {
+  transform: rotateX(-45deg);
+}
+
+.make-box__switch-item[data-face="front-around"] {
+  transform: rotateX(-360deg);
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+  .content-section {
+    padding: 2.5rem 2rem 0 2rem;
+  }
+
+  .hero__explainer {
+    max-width: 60%;
+  }
+}
+
+@import "footer";

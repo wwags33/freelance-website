@@ -1,0 +1,27 @@
+@import "globals";
+
+.footer {
+  position: relative;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.75rem;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer__container {
+  @extend %container;
+  @extend %container_flex-split;
+  padding: 0.5rem;
+}
+
+.footer__copy {
+  min-width: 6.1rem;
+  margin: 0 2rem 0 0;
+}
+
+.footer__credits {
+  margin: 0;
+  a {
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

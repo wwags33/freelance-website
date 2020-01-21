@@ -1,0 +1,26 @@
+$body-min-width: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+
+%full-shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px 2px 4px rgba(0, 0, 0, 0.2),
+    -2px -2px 4px rgba(0, 0, 0, 0.2), 2px -2px 4px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.2),
+    inset 2px -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+%shadow-transition {
+  transition: box-shadow 0.3s;
+}
+
+%container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+%container_flex-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
