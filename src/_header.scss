@@ -95,6 +95,7 @@
   input {
     position: absolute;
     top: -10rem;
+    opacity: 0;
   }
 
   input:checked ~ label {

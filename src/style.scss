@@ -29,6 +29,8 @@ body {
 }
 
 @import "header";
+@import "footer";
+@import "animations";
 
 /* Main */
 
@@ -150,5 +152,3 @@ body {
     max-width: 60%;
   }
 }
-
-@import "footer";

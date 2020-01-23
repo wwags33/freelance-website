@@ -126,6 +126,27 @@ function heroInit() {
 window.addEventListener("load", heroInit);
 
 /**
+ * Set is-visible class on any .show-on-scroll class that intersects the observer.
+ */
+function scrollAnimationInit() {
+  const callback = function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll(".show-on-scroll");
+  targets.forEach(function(target) {
+    observer.observe(target);
+  });
+}
+window.addEventListener("load", scrollAnimationInit);
+
+/**
  * jQuery to implement smooth scroll from https://css-tricks.com/snippets/jquery/smooth-scrolling/
  */
 $(function() {
